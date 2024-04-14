@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8" />
     <title>Enter Code</title>
-    <script src="forgotpassword.js"></script>
+    
     <style>
 
         body {
@@ -122,7 +122,7 @@
 
         #bottom {
             background-color: beige;
-            position: relative;
+            position: absolute;
             margin: 0;
             padding-top: 10px;
             padding-bottom: 15px;
@@ -130,7 +130,7 @@
             height: 198.59px;
             bottom: 0%;
             line-height: 1px;
-            top: 263px;
+            bottom: 0px;
 
         }
 
@@ -176,7 +176,7 @@
         <br>
 
         <!-- Replace onlick with function to verify code -->
-        <button class="index-btn-style animated-btn" type="button" onclick="">Submit</button>
+        <button id="verifyCodeButton" class="index-btn-style animated-btn" type="button">Submit</button>
 
         <div id="throw-error"></div>
 
@@ -198,6 +198,11 @@
         <p class="footerText">Information Security & Privacy</p>
         <p class="footerText">Campus Accessibility</p>
     </div>
+
+    <script src="forgotpassword.js"></script>
+    <script>
+        
+    </script>
 
 </body>
 

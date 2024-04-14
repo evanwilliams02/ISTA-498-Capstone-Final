@@ -13,16 +13,6 @@ body {
   overflow-y: scroll;
 }
 
-#title {
-  position: absolute;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: #0C234B;
-  top: 110px;
-  margin-left: 94px;
-  width: 250px;
-  height: 44px;
-}
-
 #logo1 {
   position: absolute;
   top: 70px;
@@ -161,6 +151,60 @@ p {
 .coreCourses a:hover {
   text-decoration: underline; /* Add an underline on hover for better usability */
 }
+
+#headlineText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: inline-flex;
+  position: relative;
+  left: 110px;
+  top: 130px;
+  width: 250px;
+  text-align: left;
+
+}
+
+.logoutButton:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgba(212, 212, 212, 0.3);
+    opacity: 0;
+}
+
+.logoutButton:hover:before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+
+.logoutButton {
+    position: absolute;
+    right: 50px;
+    top: 127px;
+    text-align: center;
+    background-color: rgba(212, 212, 212, 0.3);
+    border: 2px solid rgba(212, 212, 212, 0.3);
+    border-radius: 10%;
+    display: inline-flex;
+    height: 30px;
+    width: 68px;
+    cursor: pointer;
+}
+
+.buttonText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 10px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+  line-height: 1.7;
+}
     </style>
 
 <body id="body">
@@ -172,9 +216,21 @@ p {
 
     <img id="logo1" src="SchoolOfInformation.png" alt="School of Information">
 
-    <h3 id="title">
+    <!-- <h3 id="title">
         Course Recommendation
-    </h3>
+    </h3> -->
+
+    <div id="headlineText">
+      <h3 style="margin: 0;  padding: 0;">
+          Course Recommendation
+      </h3>
+    </div>
+
+    <div class='logoutButton' style="margin: 0; padding: 0;">
+        <p class='buttonText' onclick="logout()">Logout</p>
+    </div>
+
+    <br>
 
     <div id="content">
 
