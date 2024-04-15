@@ -57,15 +57,61 @@
 
         }
 
+        
         #login {
             position: relative;
             top: 155px;
-            left: 375px;
+            margin-left:auto;
+            margin-right:auto;
             width: 40%;
-            margin-bottom: 20px;
+            margin-bottom: 147px;
             text-align: center;
             font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-            margin-bottom: 147px;
+        
+        }
+
+        /* 1- I dont know why or which ones but for some reason some of the configs like (position, top, text-align, etc..) 
+            don't bleed over into the media query, for instance i may have to put position in the #login above but not
+            in the media queries but I'll have to put top in both rhe #login above and the both media query logins below
+            for it to register rn I just copied everything over */
+
+        /* 2- I think they might add on to eachother, if left id 100px in the one above and if the left in either media query is 50px
+             then the left will add up to 150px if conditions of that media query are met */
+        
+
+        /* If the browser width is anything less than 400px, */
+        @media (max-width: 100px){
+
+            /* Set the left of an element */
+            #login {
+                left: 200px;
+                position: relative;
+                top: 155px;
+                margin-left:auto;
+                margin-right:auto;
+                width: 40%;
+                margin-bottom: 147px;
+                text-align: center;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            }
+
+        }
+
+        /* If the browser width is 1000px or more, */
+        @media (min-width: 1000px){
+
+            /* Set the left of an element */
+            #login{
+                position: relative;
+                top: 155px;
+                margin-left:auto;
+                margin-right:auto;
+                width: 40%;
+                margin-bottom: 147px;
+                text-align: center;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            }
+
         }
 
         .acc-style {
@@ -201,7 +247,7 @@
         <label class="acc-style" for="emailcreate">Email</label>
         <br>
 
-        <input type="text" id="emailcreate" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Must be an email" required=''>
+        <input type="email" id="emailcreate" required=''>
         <br>
         <br>
 

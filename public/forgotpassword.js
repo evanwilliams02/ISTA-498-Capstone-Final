@@ -1,7 +1,7 @@
 // Add code to this file to make function request to send email verification
 
 function sendEmail() {
-    // Send email button
+    // Request to Send email
 }
 
 function resetPassword() {
@@ -13,18 +13,18 @@ function verifyCode() {
 }
 
 var sendEmailButton = document.getElementById("sendEmailButton");
-var verifyAndSwitchPage = document.getElementById("verifyCodeButton");
-var switchToLoginButton = document.getElementById("resetPasswordButton");
+var verifyCodeButton = document.getElementById("verifyCodeButton");
+var resetPasswordButton = document.getElementById("resetPasswordButton");
 
 sendEmailButton.addEventListener("click", () => {
     sendEmail()
     window.location.href = "verifycode.html";
 });
 
-verifyAndSwitchPage.addEventListener("click", () => {
+verifyCodeButton.addEventListener("click", () => {
     verifyCode()
 });
 
-switchToLoginButton.addEventListener("click", () => {
+resetPasswordButton.addEventListener("click", () => {
     resetPassword()
 });
